@@ -35,20 +35,22 @@ buscador.addEventListener("submit", async (e) => {
     const nombreDelPokemon = document.getElementById("input-buscar").value;
     
     const pokemones = await buscarPokemonPorNombre(nombreDelPokemon)
+    
     root.innerHTML = "";
     
-    for (let i = 0; i < pokemones.length; i++) {
-        const pokemon = pokemones[i];
-
-        root.innerHTML += `<div class="card">
-        <img src="${pokemon.imagen}"/>
-        <div class="card-content">
-        <span id="name">${pokemon.nombre}</span>
-        <span>${pokemon.tipo}</span>
-        <span>${pokemon.especie}</span>
-        </div>
-        </div>`
-    }
+        for (let i = 0; i < pokemones.length; i++) {
+            const pokemon = pokemones[i];
+            
+            root.innerHTML += `<div class="card">
+            <img src="${pokemon.imagen}"/>
+            <div class="card-content">
+            <span id="name">${pokemon.nombre}</span>
+            <span>${pokemon.tipo}</span>
+            <span>${pokemon.especie}</span>
+            </div>
+            </div>`
+        }
+    
 })
 
 
