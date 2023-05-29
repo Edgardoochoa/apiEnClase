@@ -25,6 +25,7 @@ async function mostrarPokemones() {
 mostrarPokemones()
 
 
+
 const buscador = document.getElementById("buscador");
 
 buscador.addEventListener("submit", async (e) => {
@@ -52,6 +53,3 @@ buscador.addEventListener("submit", async (e) => {
         }
     
 })
-
-
-
